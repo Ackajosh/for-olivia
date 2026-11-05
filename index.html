@@ -1,130 +1,52 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta charset="UTF-8">
+
 <title>For Olivia ❤️</title>
 
 <style>
 
 body{
-    margin:0;
     background:#0f1020;
     color:white;
-    font-family:Georgia, serif;
-    overflow:hidden;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    height:100vh;
-}
-
-.container{
+    font-family:Georgia;
     text-align:center;
+    padding-top:100px;
 }
 
 h1{
     color:#ffd166;
-    font-size:3rem;
 }
 
-button{
-    padding:18px 40px;
-    margin:20px;
-    font-size:1.2rem;
-    border:none;
-    border-radius:15px;
-    cursor:pointer;
-    transition:0.2s;
-}
-
-#correct{
+a{
+    display:block;
+    width:300px;
+    margin:20px auto;
+    padding:20px;
     background:#ff82aa;
-}
-
-#wrong{
-    background:white;
-    position:absolute;
-}
-
-#message{
-    display:none;
-    max-width:700px;
-    margin:auto;
+    color:white;
+    text-decoration:none;
+    border-radius:15px;
+    font-size:22px;
 }
 
 </style>
+
 </head>
 
 <body>
 
-<div class="container" id="question">
+<h1>❤️ For Olivia ❤️</h1>
 
-    <h1>Guess How Much I Love You ❤️</h1>
+<a href="letter.html">
+Open My Letter
+</a>
 
-    <button id="correct">
-        More than anyone could ever imagine
-    </button>
-
-    <button id="wrong">
-        i dont love you that much
-    </button>
-
-</div>
-
-<div id="message">
-
-    <h1 style="color:#ff82aa;">
-        Correct ❤️
-    </h1>
-
-    <p style="font-size:1.5rem;">
-        I'd like to put a number on how much I love you my angel.
-        <br><br>
-        But there isn't a number big enough to measure
-        how much I love you.
-        <br><br>
-        I love you bubs ❤️
-        <br><br>
-        - Josh
-    </p>
-
-</div>
-
-<script>
-
-const wrongButton = document.getElementById("wrong");
-
-wrongButton.style.left = "60%";
-wrongButton.style.top = "55%";
-
-document.addEventListener("mousemove", (e)=>{
-
-    const rect = wrongButton.getBoundingClientRect();
-
-    const dx = e.clientX - (rect.left + rect.width/2);
-    const dy = e.clientY - (rect.top + rect.height/2);
-
-    const distance = Math.sqrt(dx*dx + dy*dy);
-
-    if(distance < 100){
-
-        wrongButton.style.left =
-            Math.random() * (window.innerWidth - 150) + "px";
-
-        wrongButton.style.top =
-            Math.random() * (window.innerHeight - 80) + "px";
-    }
-});
-
-document.getElementById("correct")
-.addEventListener("click", ()=>{
-
-    document.getElementById("question").style.display="none";
-    document.getElementById("message").style.display="block";
-
-});
-
-</script>
+<a href="game.html">
+Guess How Much I Love You
+</a>
 
 </body>
+
 </html>
